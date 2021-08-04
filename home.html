@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/app-styles.css">
+    <title>home</title>
+</head>
+
+<body>
+    <section class="messages">
+
+
+        {% endif %}
+        <p> {{msg}}</p>
+
+        {% endfor %}
+
+        <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %} -->
+
+    </section>
+    <form action="/get_data" class="converter">
+        <div>
+            <label for="">converting from</label>
+            <input type="text" placeholder="USD" name="from-currency" value="{{from_currency}}">
+        </div>
+        <br>
+        <div>
+            <label for="">converting to</label>
+            <input type="text" placeholder="GBP" name="to-currency" value="{{to_currency}}" s>
+        </div>
+        <br>
+        <div>
+            <label for="">Amount</label>
+            <input type="text" placeholder="" name="amount" value="{{amount}}">
+
+        </div>
+        <br>
+        <div>
+            <button>Convert</button>
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
